@@ -1,3 +1,5 @@
+import { faRefresh, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Bicycle.css';
@@ -27,7 +29,12 @@ const Bicycle = ({ cycle }) => {
                 </div>
                 <div className="d-flex border-top p-3 justify-content-between">
                     <button className='btn btn-outline-success'>Q: {quantity}</button>
-                    <button onClick={() => updateCycle(_id)} className='btn btn-outline-success w-50' >update</button>
+                    <button onClick={() => updateCycle(_id)} className='btn btn-outline-success w-50' >
+                        <FontAwesomeIcon icon={faRefresh}></FontAwesomeIcon> update
+                    </button>
+                    <butto className='btn btn-outline-danger' >
+                        <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+                    </butto>
                 </div>
             </div>
         </div>
