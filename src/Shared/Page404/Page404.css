@@ -1,0 +1,9 @@
+.page404-text {
+    margin-top: 10rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .page404-text {
+        margin-top: 0px;
+    }
+}
