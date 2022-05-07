@@ -1,4 +1,4 @@
 /* 
-* chose them & project name bicycle
-* 
+* choose them & project name bicycle
+* create header & navbar
  */
