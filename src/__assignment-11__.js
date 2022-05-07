@@ -7,4 +7,6 @@
 * create login page email/password and on social login 
 * Database creat and load data mongodb
 * Create 404 page
+** bouns point
+* show error when user wrong
  */
