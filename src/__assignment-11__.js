@@ -6,4 +6,5 @@
 * click open single cycle id and create private route. 
 * create login page email/password and on social login 
 * Database creat and load data mongodb
+* Create 404 page
  */
