@@ -10,4 +10,5 @@
 ** bouns point
 * show error when user wrong
 * send verify email used tostyfy 
+* client-side 12 meaningful commit added
  */
