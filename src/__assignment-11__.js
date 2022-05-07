@@ -9,4 +9,5 @@
 * Create 404 page
 ** bouns point
 * show error when user wrong
+* send verify email used tostyfy 
  */
