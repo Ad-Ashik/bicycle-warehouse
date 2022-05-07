@@ -10,6 +10,8 @@ import Private from './Pages/Login/Private/Private';
 import Cycles from './Pages/Home/Cycles/Cycles';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Delete from './Pages/Manage/Delete/Delete';
+import AddCycle from './Pages/Manage/AddCycle/AddCycle';
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
         }></Route>
         <Route path='/sing-up' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/addCycle' element={<AddCycle></AddCycle>}></Route>
         <Route path='*' element={<Page404></Page404>}></Route>
       </Routes>
       <ToastContainer />

@@ -2,14 +2,35 @@ import { faRefresh, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import useBicycle from '../../../hooks/useBicycle';
+import Delete from '../../Manage/Delete/Delete';
 import './Bicycle.css';
 
 const Bicycle = ({ cycle }) => {
+    const [bicycles, setBicycles] = useBicycle();
     const { _id, name, price, description, quantity, supplierName, img } = cycle;
     const navigate = useNavigate();
 
     const updateCycle = id => {
         navigate(`/cycles/${id}`);
+    }
+
+    // deleteCycle
+    const deleteCycle = id => {
+        const removeCycle = window.confirm("you want to delete?");
+        if (removeCycle) {
+            const url = `https://frozen-taiga-96489.herokuapp.com/cycles/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .than(res => res.json())
+                .than(data => {
+                    console.log(data);
+                    const remaining = bicycles.filter(cycle => cycle._id !== id);
+                    setBicycles(remaining);
+                })
+
+        }
     }
 
     return (
@@ -32,7 +53,7 @@ const Bicycle = ({ cycle }) => {
                     <button onClick={() => updateCycle(_id)} className='btn btn-outline-success w-50' >
                         <FontAwesomeIcon icon={faRefresh}></FontAwesomeIcon> update
                     </button>
-                    <butto className='btn btn-outline-danger' >
+                    <butto className='btn btn-outline-danger' onClick={() => deleteCycle(_id)} >
                         <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
                     </butto>
                 </div>

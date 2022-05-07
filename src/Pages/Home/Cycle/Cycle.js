@@ -1,4 +1,7 @@
+import { faCartPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Form } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import useSingleCycle from '../../../hooks/useSingleCycle';
 import './Cycle.css';
@@ -10,7 +13,7 @@ const Cycle = () => {
 
     return (
         <>
-            <div className='container text-center my-5'>
+            <div className='container text-center'>
                 <h2 className='text-color'>CycleId: {cycleId}</h2>
             </div>
             <div className="card mb-3 container single-cycle">
@@ -20,13 +23,33 @@ const Cycle = () => {
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <h5 className="card-title py-3">Cycle Name: <span className='text-color'>{name}</span></h5>
-                            <div className='fw-bold d-flex justify-content-between'>
-                                <p className='btn btn-success'>Q: {quantity}</p>
-                                <p>Pirce: ${price}</p>
-                                <p>Supplier: {supplierName}</p>
+                            <h3 className="card-title text-color">
+                                Cycle Name: {name}
+                            </h3>
+                            <h4 className='text-secondary mb-4'>Pirce: <span className='fw-bold'>${price}.00</span></h4>
+                            <div className='fw-bold d-md-flex justify-content-between align-items-center'>
+                                <form className='d-flex align-items-center'>
+                                    <Form.Group className="mb-3 d-flex align-items-center" controlId="formBasicQuantity">
+                                        <Form.Label className='m-0' >QTY</Form.Label>
+                                        <Form.Control className='qut-input rounded-pill' type="number" name='quantity' value="2" />
+                                        <button className='btn btn-outline-success rounded-pill'>
+                                            Add QTY <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon>
+                                        </button>
+                                    </Form.Group>
+                                </form>
+                                <p className='supplier'>Supplier: {supplierName}</p>
                             </div>
                             <p className="card-text"><span className='fw-bold'>Description: </span>{description}</p>
+
+                            <div className='text-center mt-4'>
+                                <button className='btn btn-outline-success'>Q: {quantity}</button>
+                                <button className='btn btn-outline-danger mx-3'>
+                                    Quantity <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+                                </button>
+                                <button className='btn btn-danger'>
+                                    Product <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -34,11 +34,15 @@ const Header = () => {
                         <Nav.Link href="#features">About</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">More deets</Nav.Link>
 
                         {
                             user ?
-                                <Nav.Link as={Link} to="/login" onClick={logOut}>Sing Out</Nav.Link>
+                                <>
+                                    <Nav.Link as={Link} to="/addCycle">Manage Cycle</Nav.Link>
+                                    <Nav.Link as={Link} to="/addCycle">Add Cycle</Nav.Link>
+                                    <Nav.Link as={Link} to="/addCycle">My Cycle</Nav.Link>
+                                    <Nav.Link as={Link} to="/login" onClick={logOut}>Sing Out</Nav.Link>
+                                </>
                                 :
                                 <>
                                     <Nav.Link as={Link} to="/login">Login</Nav.Link>
