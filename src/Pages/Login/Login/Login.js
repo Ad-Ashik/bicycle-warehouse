@@ -53,10 +53,6 @@ const Login = () => {
                     <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
                 {checkError}
-                <p>Forget your password? <Link to="" className='text-success text-decoration-underline'>
-                    Reset Password
-                </Link>
-                </p>
                 <Button className='w-25 btn' variant="outline-success" type="submit">
                     Login
                 </Button>
