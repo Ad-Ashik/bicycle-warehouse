@@ -36,7 +36,6 @@ const Login = () => {
     }
 
 
-
     return (
         <div className='w-50 mx-auto border p-4 rounded-3 my-5'>
             {

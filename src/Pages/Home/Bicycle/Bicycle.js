@@ -2,8 +2,8 @@ import { faRefresh, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import useBicycle from '../../../hooks/useBicycle';
-import Delete from '../../Manage/Delete/Delete';
 import './Bicycle.css';
 
 const Bicycle = ({ cycle }) => {
@@ -18,19 +18,24 @@ const Bicycle = ({ cycle }) => {
     // deleteCycle
     const deleteCycle = id => {
         const removeCycle = window.confirm("you want to delete?");
+        if (removeCycle === true) {
+            toast.error('Permanently delete this product?', {
+                position: toast.POSITION.TOP_RIGHT
+            });
+        }
         if (removeCycle) {
             const url = `https://frozen-taiga-96489.herokuapp.com/cycles/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
                 .than(res => res.json())
-                .than(data => {
+                .then(data => {
                     console.log(data);
                     const remaining = bicycles.filter(cycle => cycle._id !== id);
                     setBicycles(remaining);
                 })
-
         }
+
     }
 
     return (

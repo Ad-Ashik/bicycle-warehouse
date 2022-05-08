@@ -10,7 +10,6 @@ import Private from './Pages/Login/Private/Private';
 import Cycles from './Pages/Home/Cycles/Cycles';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Delete from './Pages/Manage/Delete/Delete';
 import AddCycle from './Pages/Manage/AddCycle/AddCycle';
 
 function App() {
