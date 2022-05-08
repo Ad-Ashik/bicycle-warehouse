@@ -1,0 +1,9 @@
+.responsive-button {
+    width: 25%;
+}
+
+@media only screen and (max-width: 600px) {
+    .responsive-button {
+        width: 100%;
+    }
+}

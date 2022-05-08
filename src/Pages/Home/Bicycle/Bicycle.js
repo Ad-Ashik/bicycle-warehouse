@@ -28,7 +28,7 @@ const Bicycle = ({ cycle }) => {
             fetch(url, {
                 method: 'DELETE'
             })
-                .than(res => res.json())
+                .then(res => res.json())
                 .then(data => {
                     console.log(data);
                     const remaining = bicycles.filter(cycle => cycle._id !== id);
