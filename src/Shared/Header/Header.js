@@ -28,10 +28,10 @@ const Header = () => {
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
                         <Nav.Link as={Link} to="/cycles">Bicycle</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Accessories</Nav.Link>
+                        <Nav.Link as={Link} to="/features">Features</Nav.Link>
+                        <Nav.Link as={Link} to="/accessories">Accessories</Nav.Link>
                         <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
-                        <Nav.Link href="#features">About</Nav.Link>
+                        <Nav.Link as={Link} to="/About">About</Nav.Link>
                     </Nav>
                     <Nav>
 
