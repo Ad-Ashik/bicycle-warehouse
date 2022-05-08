@@ -63,10 +63,6 @@ const Register = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder="Password" />
                 </Form.Group>
-                <Form.Group className="mb-3 d-flex" controlId="formBasicCheck">
-                    {/* <Form.Check onClick={() => setAgree(!agree)} className='mx-2' name="terms" /> */}
-                    {/* <Form.Label className={agree ? 'text-primary' : 'text-danger'}>Accept Genius Car <Link to="">Terms & Conditions</Link></Form.Label> */}
-                </Form.Group>
                 <Button className='w-25 btn' variant="outline-success" type="submit">
                     SingUp
                 </Button>

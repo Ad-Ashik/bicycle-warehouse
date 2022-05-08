@@ -22,7 +22,6 @@ const Bicycles = () => {
                     ></Bicycle>)
                 }
             </div>
-
             <div className="mt-3">
                 <NavLink as={Link} to="/cycles" className='btn btn-success w-50 p-2 mx-auto'>All Bicycles</NavLink>
             </div>
