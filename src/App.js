@@ -11,6 +11,8 @@ import Cycles from './Pages/Home/Cycles/Cycles';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddCycle from './Pages/Manage/AddCycle/AddCycle';
+import MangeCycles from './Pages/Manage/MangeCycles/MangeCycles';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -25,9 +27,11 @@ function App() {
             <Cycle></Cycle>
           </Private>
         }></Route>
+        <Route path='/manage-cycles' element={<MangeCycles></MangeCycles>}></Route>
         <Route path='/sing-up' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/addCycle' element={<AddCycle></AddCycle>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<Page404></Page404>}></Route>
       </Routes>
       <ToastContainer />

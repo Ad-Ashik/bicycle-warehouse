@@ -30,7 +30,7 @@ const Header = () => {
                         <Nav.Link as={Link} to="/cycles">Bicycle</Nav.Link>
                         <Nav.Link href="#features">Features</Nav.Link>
                         <Nav.Link href="#pricing">Accessories</Nav.Link>
-                        <Nav.Link href="#features">Blogs</Nav.Link>
+                        <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
                         <Nav.Link href="#features">About</Nav.Link>
                     </Nav>
                     <Nav>
@@ -38,7 +38,7 @@ const Header = () => {
                         {
                             user ?
                                 <>
-                                    <Nav.Link as={Link} to="/addCycle">Manage Cycle</Nav.Link>
+                                    <Nav.Link as={Link} to="/manage-cycles">Manage Cycle</Nav.Link>
                                     <Nav.Link as={Link} to="/addCycle">Add Cycle</Nav.Link>
                                     <Nav.Link as={Link} to="/addCycle">My Cycle</Nav.Link>
                                     <Nav.Link as={Link} to="/login" onClick={logOut}>Sing Out</Nav.Link>
