@@ -20,7 +20,7 @@ const Bicycle = ({ cycle }) => {
         const removeCycle = window.confirm("you want to delete?");
         if (removeCycle === true) {
             toast.error('Permanently delete this product?', {
-                position: toast.POSITION.TOP_RIGHT
+                position: toast.POSITION.TOP_CENTER
             });
         }
         if (removeCycle) {
@@ -33,7 +33,7 @@ const Bicycle = ({ cycle }) => {
                     console.log(data);
                     const remaining = bicycles.filter(cycle => cycle._id !== id);
                     setBicycles(remaining);
-                })
+                });
         }
 
     }
@@ -58,9 +58,9 @@ const Bicycle = ({ cycle }) => {
                     <button onClick={() => updateCycle(_id)} className='btn btn-outline-success w-50' >
                         <FontAwesomeIcon icon={faRefresh}></FontAwesomeIcon> update
                     </button>
-                    <butto className='btn btn-outline-danger' onClick={() => deleteCycle(_id)} >
+                    <button className='btn btn-outline-danger' onClick={() => deleteCycle(_id)} >
                         <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
-                    </butto>
+                    </button>
                 </div>
             </div>
         </div>
