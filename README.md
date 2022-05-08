@@ -1,6 +1,40 @@
-# Getting Started with Create React App
+# Bicycle Ware House 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Link- [Bicycle Ware House](https://bicycle-warehouse-f2360.web.app/)
+
+
+## Live Link- [Stackoverflow Answer](https://stackoverflow.com/questions/41293014/new-date-getfullyear-in-react/72161980#72161980)
+
+
+## Available features and functionality
+* Login/Register header section added and click switch.
+* Send Email Verification and Login google 
+* Header section add navbar and four login user show [Manage Cycle, Add Cycle, My Cycle, Sing Out]
+* Features Add product
+* Bicycle Accessories item available
+* and Server site added
+
+## Used in project technologies 
+# Client site
+* React (frameworks)
+* .env
+* Google Authentication used by friebase
+* React Router
+* "React Firebase Hooks" used by Authentication
+* Custom hoocks
+* used by React Bootstrap & noraml Bootstrap
+* React toastify used.
+
+# Server site
+* install node express
+* entry poing (index.js)
+* npm i express cors mongodb dotenv
+* Create heroku account
+* heroku login  
+* git add . git commit. git push  
+* git push heroku main  
+* npm run build  
+* firebase deploy 
 
 ## Available Scripts
 
