@@ -1,7 +1,7 @@
 import { faCartPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Form } from 'react-bootstrap';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Form, NavLink } from 'react-bootstrap';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useBicycle from '../../../hooks/useBicycle';
 import useSingleCycle from '../../../hooks/useSingleCycle';
@@ -103,6 +103,9 @@ const Cycle = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="mt-5">
+                <NavLink as={Link} to="/manage-cycles" className='btn btn-success w-50 p-2 mx-auto'>All Bicycles</NavLink>
             </div>
         </>
     );

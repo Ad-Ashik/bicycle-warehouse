@@ -30,7 +30,11 @@ function App() {
             <Cycle></Cycle>
           </Private>
         }></Route>
-        <Route path='/manage-cycles' element={<MangeCycles></MangeCycles>}></Route>
+        <Route path='/manage-cycles' element={
+          <Private>
+            <MangeCycles></MangeCycles>
+          </Private>
+        }></Route>
         <Route path='/sing-up' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/addCycle' element={<AddCycle></AddCycle>}></Route>
